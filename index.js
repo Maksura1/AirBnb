@@ -11,7 +11,7 @@ app.get('/', (req, res) => {
 	res.sendFile(path.join(__dirname, '/client/homes.html'))
 	console.log('__dirname', __dirname)
 })
-//this is just a quidk ranaks s 
+//this is just a quidk ranaks s this is another change 
 //Run Server
 app.listen(3000, () => {
 	console.log('Server listening on port 3000');
