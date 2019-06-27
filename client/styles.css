@@ -1,0 +1,30 @@
+#banner {
+	padding-top: 30px;
+	width: 100%;
+	height: 350px;
+	font-size: 60px;
+	color: white;
+  background-image: url(https://a0.muscache.com/4ea/air/v2/pictures/c458d5d1-ec27-461c-aaba-392f8ad6b1a1.jpg?t=r:w2263-h1132-sfit,e:fjpg-c90);
+}
+body {
+	background-color: lightblue;
+}
+
+#content {
+	background-color: grey;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-right: 10px;
+	padding-left: 10px;
+	display: grid;
+	grid-template-columns: 1fr 3fr;
+	column-gap: 10px;
+
+}
+
+#sidebar {
+	background-color: white;
+}
+#products {
+	background-color: white;
+}
