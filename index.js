@@ -5,6 +5,8 @@ const app = express()
 
 app.get('/api/homes', require('./controller/homes_get'))
 app.get('/api/cities', require('./controller/cities_get'))
+app.get('/api/countries', require('./controller/countries_get'))
+app.get('/api/types', require('./controller/types_get'))
 
 // run everything inside client as static
 app.use(express.static(path.join(__dirname, 'client')))
