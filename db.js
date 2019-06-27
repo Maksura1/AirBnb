@@ -1,9 +1,9 @@
 // require package
 const {Client} = require('pg')
 
-// create connection
+// create connection to database on postgres
 const db = new Client({
-	connectionString: 'postgres://maksuraalam@localhost:5432/AirBnb'
+	connectionString: 'postgres://maksuraalam:@localhost:5432/maksuraalam'
 })
 
 // connect to database
@@ -15,5 +15,5 @@ db.connect((err) => {
 	}
 })
 
-//export db on index.js
+//export db
 module.exports = db
