@@ -17,13 +17,24 @@ body {
 	padding-right: 10px;
 	padding-left: 10px;
 	display: grid;
-	grid-template-columns: 1fr 3fr;
+	grid-template-columns: 1fr 5fr;
 	column-gap: 10px;
 
 }
 
 #sidebar {
 	background-color: white;
+	font-style:normal;
+	font-size: 20px;
+}
+
+#sidebar ul li a {
+	font-weight: bold;
+	font-family: sans-serif;
+	co
+	font-size: 17px;
+	display: block;
+	padding-bottom: 10px;
 }
 #products {
 	background-color: white;
