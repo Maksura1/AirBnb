@@ -2,7 +2,7 @@
 const db = require('../db')
 
 module.exports = (req, res) => {
-	db.query(`SELECT DISTINCT city FROM homes`, (err, result) => {
+	db.query(`SELECT * FROM cities`, (err, result) => {
 		if (err) {
 			console.log('err', err)
 		} else {
