@@ -32,16 +32,17 @@ body {
 	font-weight: bold;
 	font-family: sans-serif;
 	co
-	font-size: 17px;
+	font-size: 12px;
 	display: block;
 	padding-bottom: 10px;
 }
 #properties {
 	background-color: white;
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 .card {
+	font-size: 10px;
 	width: 200px;
 	height: 250px;
 	padding: 5px;
@@ -50,5 +51,7 @@ margin: 20px;
 }
 .card img {
 	width: 100%;
+	heigth: 70%;
+}
 
 }

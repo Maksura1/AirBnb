@@ -13,12 +13,10 @@ axios.get('/api/homes').then((res) => {
 		homes_ui.insertAdjacentHTML('afterbegin', `
 		<div class="card">
 			<img src="${e.images}" alt="">
-			<h5> ${e.name}</h5>
-			<p>Price: ${e.price}</p>
-			<p><i class="fas fa-star"></i></p>
+			<h4> ${e.name} <br> Price: $${e.price} <br>
+			Rating: <i class="fas fa-star"></i></h4>
 		</div>
-		`
-	)
+		`)
 	})
 })//end of all homes
 
@@ -34,7 +32,9 @@ axios.get('/api/countries').then((res)=> {
 	//display countries in UI
 	countries.forEach((e) => {
 		countries_ui.insertAdjacentHTML('afterbegin', `
+
 		<li id="${e.id}" class="country"> ${e.name}</li>
+
 		`)
 	})
 })// end of countries list on sidebar
@@ -45,10 +45,15 @@ axios.get('/api/cities').then((res) => {
 	let cities = res.data//get resulting cities_get
 
 	//target countries_get
-	let cities_ui = document.getElementById
+	let cities_ui = document.getElementById('city')
+
+	//display cities on the sidebar
+	cities.forEach((e) => {
+		cities_ui.insertAdjacentHTML('afterbegin',`
+    <li id="${e.id}" class="country"> ${e.name}</li>
+	`)
+	})
 })
-
-
 
 //create an eventlister for Australia
 document.addEventListener('click', (e) => {
