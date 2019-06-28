@@ -36,6 +36,19 @@ body {
 	display: block;
 	padding-bottom: 10px;
 }
-#products {
+#properties {
 	background-color: white;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+.card {
+	width: 200px;
+	height: 250px;
+	padding: 5px;
+margin: 20px;
+	background-color: lightgrey;
+}
+.card img {
+	width: 100%;
+
 }
