@@ -13,8 +13,9 @@ axios.get('/api/homes').then((res) => {
 		homes_ui.insertAdjacentHTML('afterbegin', `
 		<div class="card">
 			<img src="${e.images}" alt="">
-			<h4> ${e.name} <br> Price: $${e.price} <br>
-			Rating: <i class="fas fa-star"></i></h4>
+			<h6> ${e.name}</h6>
+			<h7> Price: $${e.price} <br>
+			Rating: <i class="fas fa-star"></i></h7>
 		</div>
 		`)
 	})
@@ -57,12 +58,28 @@ axios.get('/api/cities').then((res) => {
 
 //create an eventlister for Australia
 document.addEventListener('click', (e) => {
+	// ALL CLICKS HERE
 	// console.log("helo World")
 	if (e.target.classList.contains('country')) {
 		// console.log(e.target.id)//
 		//get target categories
-		axios.get('/api/')
-	}
+		axios.get(`/api/homes?country=${e.target.id}`).then((res)=>{
+			let homes = res.data
+			let homes_ui = document.getElementById('properties')
+			homes_ui.innerHTML = ''// makes default properties go away
+			homes.forEach((e) => {
+				homes_ui.insertAdjacentHTML('afterbegin', `
+				<div class="card">
+					<img src="${e.images}" alt="">
+					<h6> ${e.name}</h6>
+					<h7> Price: $${e.price} <br>
+					Rating: <i class="fas fa-star"></i></h7>
+				</div>
+				`)
+			})
+
+		})
+	}//clicking codes end here
 })
 
 
