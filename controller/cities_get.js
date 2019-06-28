@@ -6,7 +6,6 @@ module.exports = (req, res) => {
 		if (err) {
 			console.log('err', err)
 		} else {
-			console.log('result', result);
 			res.send(result.rows)
 		}
 	})

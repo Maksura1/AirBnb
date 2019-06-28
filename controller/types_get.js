@@ -1,7 +1,7 @@
 const db = require('../db')
 
 module.exports = (req, res) => {
-	db.query(`SELECT DISTINCT type FROM homes`, (err, result) => {
+	db.query(`SELECT * FROM types`, (err, result) => {
 		if (err) {
 			console.log('err', err)
 		} else {

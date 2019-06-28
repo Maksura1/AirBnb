@@ -1,27 +1,18 @@
-//await for window load
-window.onload = () => {
-	//let sidebar = document.getElementById('sidebar')
-	let ul_city = document.getElementById('city')
-	console.log(ul_city)
-	let cities = ['Paris', 'New York', 'Sydney', 'Cape Town']
-	cities.forEach((c) => {
-		ul_city.insertAdjacentHTML('beforeEnd', `
-		<li>
-		 <a href="#"> ${c}</a>
-		</li>
-	`)
-	})
+window.onload =() = {
+//homes
 
+axios.get(/api/homes').then((res) => {
+	// console.log('res', res.data)
+	let homes = res.data
+	// target products
+	let homes_ui = document.getElementById('products')
 
-let ul_country = document.getElementById('country')
-console.log(ul_country)
-let countries = ['France', 'USA', 'South Africa', 'Asutralia']
-countries.forEach((c) => {
-	ul_country.insertAdjacentHTML('beforeEnd',`
-<li>
- <a href ="#"> ${c} </a>
-</li>
- `)
-})
+	// display each product in the DOM
+	products.forEach((p) => {
+		products_ui.insertAdjacentHTML('beforeEnd', `
+		<div class="product">
+			<div class="product-image">
+				<i class="far fa-star"></i>
+
 
 }
